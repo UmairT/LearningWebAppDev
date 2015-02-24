@@ -1,52 +1,124 @@
+/* make the backroud color of the whole page yellow */
 body {
-  background: #f9e933;
+	background: #f9e933;
 }
 
+/* make the rows (header, main, and footer elements) have the fixed width property */
 header, main, footer {
-  min-width: 855px;
+	min-width: 855px;
 }
 
+/* make the content centered and fixed at 855px wide */
 header .container, main .container, footer .container {
-  max-width: 855px;
-  margin: auto;
+	max-width: 855px;
+	margin: auto;
 }
 
+/*make the background color of the header white */
 header {
-  background: white;
-  overflow: auto;
+	background: white;
+	overflow: auto;
+	border-bottom: 2px solid lightgray;
 }
 
-header h1 {
-  float: left;
-  width: 570px;
+/* align the header's h1 column left (2/3 of content) */
+header .container_h1 {
+	float: left;
+	width: 570px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	font-family: ubuntu;
+	font-size: 300%;
+	color: darkred;
 }
 
+/* align the header's nav column right !1/3 of content) */
 header nav {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
+	padding-top: 20px;
+	font-family: droid sans;
 }
 
+/*make the background color of the main content white */
 main {
-  background: white;
-  overflow: auto;
+	background: white;
+	overflow: auto;
+}
+
+main .left_h2 {
+	float: left;
+	width: 570px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	font-family: ubuntu;
+	font-size: 200%;
+}
+
+main .left_h3 {
+	float: left;
+	width: 570px;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	font-family: ubuntu;
+	font-size: 120%;
 }
 
 main .left {
-  float: left;
-  width: 570px;
+	float: left;
+	width: 570px;
+	font-family: droid sans;
+	padding-bottom: 50px;
 }
 
 main .right {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
+}
+
+footer .contact_h5 {
+	float: left;
+	width: 570px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: ubuntu;
+	font-size: 130%;
+}
+
+footer .contact_p1 {
+	float: left;
+	width: 570px;
+	padding-bottom: 5px;
+	font-family: droid sans;
+	color: darkred;
 }
 
 footer .left {
-  float: left;
-  width: 570px;
+	float: left;
+	width: 570px;
+	font-family: droid sans;
+}
+
+footer .sitemap_h5 {
+	float: right;
+	width: 285px;
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-family: ubuntu;
+	font-size: 130%;
 }
 
 footer .sitemap {
-  float: right;
-  width: 285px;
+	float: right;
+	width: 285px;
+	font-family: droid sans;
+}
+
+footer .sitemap_ul {
+	float: right;
+	width: 285px;
+	font-family: droid sans;
+	-webkit-columns: 2;
+	columns: 2;
+	-moz-columns: 2;
 }
