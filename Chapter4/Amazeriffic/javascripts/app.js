@@ -1,4 +1,8 @@
+// Client-side code
+/* jshint browser: true, jquery: true, curly: true, eqeqeq: true, forin: true, immed: true, indent: 4, latedef: true, newcap: true, nonew: true, quotmark: double, strict: true, undef: true, unused: true */
 var main = function () {
+    "use strict"
+
     var toDos = ["Get groceries",
                  "Make up some new ToDos",
                  "Prep for Monday's class",
@@ -14,6 +18,11 @@ var main = function () {
             var $content,
                 $input,
                 $button,
+                $slideshow,
+                $screenshot1,
+                $screenshot2,
+                $screenshot3,
+                $screenshot4,
                 i;
 
             $(".tabs a span").removeClass("active");
@@ -48,6 +57,30 @@ var main = function () {
                 $content = $("<div>").append($input).append($button);
                /* Alternatively append() allows multiple arguments so the above
                 can be done with $content = $("<div>").append($input, $button); */
+
+                $button.on("keypress", function (event) { 
+                    if (event.keyCode === 13) {
+                        if ($input.val() !== "") {
+                            toDos.push($input.val());
+                            $input.val("");
+                        }
+                    }
+                });
+
+                $content = $("<div>").append($input).append($button);
+            }
+
+            else if ($element.parent().is(":nth-child(4)")) {
+                $slideshow = $("<script>");
+
+                $slideshow.text("jQuery('a.gallery').colorbox({opacity:0.5, rel:'group1', slideshow:true});");
+
+                $screenshot1 = $("<a class='gallery' href='Screenshot1.png'>Start SlideShow</a>");
+                $screenshot2 = $("<a class='gallery' href='Screenshot2.png'></a>");
+                $screenshot3 = $("<a class='gallery' href='Screenshot3.png'></a>");
+                $screenshot4 = $("<a class='gallery' href='Screenshot4.png'></a>"); 
+
+                $content = $("<ul>").append($screenshot1, $screenshot2, $screenshot3, $screenshot4, $slideshow);
             }
 
             $("main .content").append($content);
