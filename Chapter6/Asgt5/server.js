@@ -58,7 +58,7 @@ function createButtons(res) {
 function gameLogic(req, res) {
 
 	var resArray = ["rock", "paper", "scissors", "lizard", "spock"];
-	var rand = resArray[Math.floor(Math.random() * resArray.length)]
+	var rand = resArray[Math.floor(Math.random() * resArray.length)];
 	
 	if (req.method === "POST" && req.url === "/play/rock") {
         if (rand === "lizard" || rand === "scissors") {
@@ -130,8 +130,7 @@ function frontPage(req, res) {
     });
     
     var title = "Rock Paper Scissors Lizard Spock",
-    	options = "Choose one of the following options:",
-    	servChoice = "Server choice: ";
+    	options = "Choose one of the following options:";
     
     beginPage(res, title);
     writeHeading(res, "h1", title);
