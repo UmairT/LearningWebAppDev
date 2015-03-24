@@ -1,0 +1,49 @@
+body {
+	font-size: 100%;
+}
+
+header, main, footer {
+	min-width: 855px;
+	padding: 10px 0 10px 0;
+}
+
+header .container, main .container, footer .container {
+	max-width: 855px;
+	margin: auto;
+}
+
+/* HEADER */
+header {
+	background: white;
+	overflow: auto;
+}
+
+header h1 {
+	font-size: 2em;
+	float: left;
+	width: 570px;
+}
+
+
+/* MAIN */
+main {
+	background: white;
+}
+
+main h2 {
+	font-size: 1.25em;
+}
+
+main .Buttons {
+    padding: 30px 10px 30px 10px;
+    border-radius: 0 5px 5px 5px;
+    background: white;
+}
+
+main .Buttons button {
+  padding: 0 3px 0 3px;
+  border-radius: 3px;
+  margin-left: 3px;
+  font-size: 1.25em;
+  cursor: pointer;
+}
