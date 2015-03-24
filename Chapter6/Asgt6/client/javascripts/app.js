@@ -5,10 +5,11 @@
 
 function generateResults(results) {
 
-	var $resultString= $("<p>").html("Game Result: " + results.outcome + "<br><br>Total Wins: " + results.wins +
+	var $resultString= $("<p>").html("Player Choice: " + results.userChoice + 
+		"<br>Server Choice: " + results.serverChoice + 
+		"<br><br>Game Result: " + results.outcome + "<br><br>Total Wins: " + results.wins + 
 		"<br>Total losses: " + results.losses + "<br>Total ties: " + results.ties);
-
-	console.log("got JSON");
+		
 	return $resultString;
 }
 

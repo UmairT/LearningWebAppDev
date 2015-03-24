@@ -31,7 +31,7 @@ main {
 }
 
 main h2 {
-	font-size: 1.25em;
+	font-size: 1.5em;
 }
 
 main .Buttons {
@@ -46,4 +46,9 @@ main .Buttons button {
   margin-left: 3px;
   font-size: 1.25em;
   cursor: pointer;
+}
+
+main .gameResults {
+	margin-left: 15px;
+	font-size: 1.25em;
 }

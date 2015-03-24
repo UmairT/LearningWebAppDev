@@ -16,6 +16,8 @@ jsonObject.outcome = "";
 jsonObject.wins = 0;
 jsonObject.losses = 0; 
 jsonObject.ties = 0;
+jsonObject.userChoice = "";
+jsonObject.serverChoice = "";
 	
 function gameLogic(userChoice) {
 
@@ -23,6 +25,9 @@ function gameLogic(userChoice) {
 	var rand = resArray[Math.floor(Math.random() * resArray.length)];
 	
 	serverChoice = rand;
+	
+	jsonObject.userChoice = userChoice;
+	jsonObject.serverChoice = serverChoice;
 	
 	if (userChoice === "rock") {
         if (serverChoice === "lizard" || serverChoice === "scissors") {
