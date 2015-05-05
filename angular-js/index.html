@@ -6,23 +6,23 @@
     <link href='style.css' rel='stylesheet' type='text/css'>
 </head>
 
-<body ng-app="commentsApp">
+<body data-ng-app="commentsApp">
     <header>
         <h1>Comments</h1>
         <p>A simple app that allows a user to input comments</p>
     </header>
 
-    <main ng-controller="CommentsController">
+    <main data-ng-controller="CommentsController">
         <section class='comment-input'>
             <p>Add Your Comment:</p>
-            <form ng-submit="submit()">
-                <input ng-model="newComment" />
-                <button ng-click="addComment()">+</button>
+            <form data-ng-submit="submit()">
+                <input data-ng-model="newComment" />
+                <button data-ng-click="addComment()">+</button>
             </form>
         </section>
 
         <section class='comments'>
-            <p ng-repeat="comment in comments">{{ comment }}</p>
+            <p data-ng-repeat="comment in comments">{{ comment }}</p>
         </section>
     </main>
 
