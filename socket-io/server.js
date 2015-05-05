@@ -31,11 +31,11 @@ var ToDo = mongoose.model("ToDo", ToDoSchema);
 
 server.listen(3000);
 
-io.on("connection", function(socket) {
+/*io.on("connection", function(socket) {
     socket.on("message", function(msg) {
         console.log("message: " + msg);
     });
-});
+});*/
 
 io.on("connection", function(socket) {
     socket.on("list", function(msg) {
